@@ -1,7 +1,5 @@
 {
   "name": "Tủ Lạnh Thông Minh",
   "description": "Quản lý thực phẩm thông minh, cảnh báo hạn sử dụng và gợi ý món ăn từ AI dựa trên những gì bạn đang có.",
-  "requestFramePermissions": [
-    "camera"
-  ]
+  "requestFramePermissions": ["camera"]
 }

@@ -1,10 +1,9 @@
-
 export const languagesInfo = {
   vi: { name: "Tiếng Việt", flag: "🇻🇳" },
   en: { name: "English", flag: "🇺🇸" },
   ja: { name: "日本語", flag: "🇯🇵" },
   ko: { name: "한국어", flag: "🇰🇷" },
-  zh: { name: "中文", flag: "🇨🇳" }
+  zh: { name: "中文", flag: "🇨🇳" },
 };
 
 export const translations = {
@@ -34,7 +33,8 @@ export const translations = {
     noItems: "Tủ lạnh đang trống trơn",
     noFavs: "Chưa có món yêu thích nào",
     refreshAI: "Làm mới thực đơn AI",
-    refreshLimit: "Hôm nay bác đã dùng lượt miễn phí. Xem quảng cáo ngắn để đổi thực đơn mới nhé!",
+    refreshLimit:
+      "Hôm nay bác đã dùng lượt miễn phí. Xem quảng cáo ngắn để đổi thực đơn mới nhé!",
     watchAd: "Xem quảng cáo để làm mới",
     all: "Tất cả",
     adLoading: "Đang tải quảng cáo...",
@@ -50,13 +50,27 @@ export const translations = {
     expiryDate: "Hết hạn ngày",
     units: ["kg", "g", "lít", "ml", "quả", "túi", "hộp", "bó", "miếng"],
     categories: {
-      'Thịt & Hải sản': 'Thịt & Hải sản',
-      'Rau củ': 'Rau củ',
-      'Trái cây': 'Trái cây',
-      'Sữa & Trứng': 'Sữa & Trứng',
-      'Gia vị': 'Gia vị',
-      'Khác': 'Khác'
-    }
+      "Thịt & Hải sản": "Thịt & Hải sản",
+      "Rau củ": "Rau củ",
+      "Trái cây": "Trái cây",
+      "Sữa & Trứng": "Sữa & Trứng",
+      "Gia vị": "Gia vị",
+      Khác: "Khác",
+    },
+    onboarding: {
+      welcome: "Chào bác đến với Bếp Thông Minh! 👋",
+      step1Title: "Quét & Thêm Đồ",
+      step1Desc:
+        "Bác dùng camera để quét mã vạch hoặc thêm tay đồ ăn mới mua vào tủ nhé.",
+      step2Title: "Theo Dõi Hạn Dùng",
+      step2Desc:
+        "App sẽ nhắc bác món nào sắp hỏng để không bị lãng phí thực phẩm.",
+      step3Title: "AI Gợi Ý Món Ăn",
+      step3Desc:
+        "Dựa vào những gì có sẵn, AI sẽ bày cách nấu món ngon và tính luôn Calo cho bác!",
+      getStarted: "Bắt đầu ngay!",
+      next: "Tiếp theo",
+    },
   },
   en: {
     appName: "Kitchen Manager",
@@ -100,13 +114,27 @@ export const translations = {
     expiryDate: "Expiry",
     units: ["kg", "g", "liter", "ml", "piece", "bag", "box", "bunch", "slice"],
     categories: {
-      'Thịt & Hải sản': 'Meat & Seafood',
-      'Rau củ': 'Vegetables',
-      'Trái cây': 'Fruits',
-      'Sữa & Trứng': 'Dairy & Eggs',
-      'Gia vị': 'Spices',
-      'Khác': 'Others'
-    }
+      "Thịt & Hải sản": "Meat & Seafood",
+      "Rau củ": "Vegetables",
+      "Trái cây": "Fruits",
+      "Sữa & Trứng": "Dairy & Eggs",
+      "Gia vị": "Spices",
+      Khác: "Others",
+    },
+    onboarding: {
+      welcome: "Welcome to Smart Kitchen! 👋",
+      step1Title: "Scan & Add",
+      step1Desc:
+        "Use camera to scan barcodes or manually add new items to your fridge.",
+      step2Title: "Track Expiry",
+      step2Desc:
+        "We'll notify you when items are about to expire to avoid food waste.",
+      step3Title: "AI Recipe Suggestions",
+      step3Desc:
+        "AI creates recipes based on what you have and calculates calories!",
+      getStarted: "Get Started!",
+      next: "Next",
+    },
   },
   ja: {
     appName: "スマート冷蔵庫",
@@ -136,7 +164,8 @@ export const translations = {
     addFood: "新規追加",
     saveToFridge: "冷蔵庫に保存",
     refreshAI: "AIメニューを更新",
-    refreshLimit: "本日の無料分は終了しました。動画を見て新メニューを表示しますか？",
+    refreshLimit:
+      "本日の無料分は終了しました。動画を見て新メニューを表示しますか？",
     watchAd: "広告を見て更新",
     all: "すべて",
     adLoading: "広告を読み込み中...",
@@ -150,13 +179,25 @@ export const translations = {
     scannerDesc: "バーコードを枠内に合わせてください",
     units: ["kg", "g", "L", "ml", "個", "袋", "箱", "束", "枚"],
     categories: {
-      'Thịt & Hải sản': '肉・魚介類',
-      'Rau củ': '野菜',
-      'Trái cây': '果物',
-      'Sữa & Trứng': '乳製品・卵',
-      'Gia vị': '調味料',
-      'Khác': 'その他'
-    }
+      "Thịt & Hải sản": "肉・魚介類",
+      "Rau củ": "野菜",
+      "Trái cây": "果物",
+      "Sữa & Trứng": "乳製品・卵",
+      "Gia vị": "調味料",
+      Khác: "その他",
+    },
+    onboarding: {
+      welcome: "スマート冷蔵庫へようこそ！👋",
+      step1Title: "スキャンして追加",
+      step1Desc:
+        "バーコードをスキャンするか、手動で新しい食材を追加しましょう。",
+      step2Title: "賞味期限を管理",
+      step2Desc: "食材の無駄をなくすために、期限が近づくとお知らせします。",
+      step3Title: "AIレシピ提案",
+      step3Desc: "あるもので作れるレシピをAIが提案し、カロリーも計算します！",
+      getStarted: "始める！",
+      next: "次へ",
+    },
   },
   ko: {
     appName: "스마트 냉장고",
@@ -186,7 +227,8 @@ export const translations = {
     addFood: "신규 추가",
     saveToFridge: "냉장고에 저장",
     refreshAI: "AI 레시피 새로고침",
-    refreshLimit: "오늘의 무료 추천을 이미 사용했습니다. 광고를 보고 새 메뉴를 확인하세요!",
+    refreshLimit:
+      "오늘의 무료 추천을 이미 사용했습니다. 광고를 보고 새 메뉴를 확인하세요!",
     watchAd: "광고 보고 새로고침",
     all: "전체",
     adLoading: "광고 불러오는 중...",
@@ -200,13 +242,25 @@ export const translations = {
     scannerDesc: "바코드를 프레임 안에 맞춰주세요",
     units: ["kg", "g", "리터", "ml", "개", "봉지", "박스", "다발", "조각"],
     categories: {
-      'Thịt & Hải sản': '고기 및 해산물',
-      'Rau củ': '채소',
-      'Trái cây': '과일',
-      'Sữa & Trứng': '유제품 및 계란',
-      'Gia vị': '조미료',
-      'Khác': '기타'
-    }
+      "Thịt & Hải sản": "고기 및 해산물",
+      "Rau củ": "채소",
+      "Trái cây": "과일",
+      "Sữa & Trứng": "유제품 및 계란",
+      "Gia vị": "조미료",
+      Khác: "기타",
+    },
+    onboarding: {
+      welcome: "스마트 주방에 오신 것을 환영합니다! 👋",
+      step1Title: "스캔 및 추가",
+      step1Desc: "바코드를 스캔하거나 수동으로 냉장고에 품목을 추가하세요.",
+      step2Title: "유통기한 추적",
+      step2Desc: "음식 낭비를 줄이기 위해 유통기한이 임박하면 알려드립니다.",
+      step3Title: "AI 레시피 추천",
+      step3Desc:
+        "냉장고 속 재료로 AI가 레시피를 제안하고 칼로리도 계산해 드립니다!",
+      getStarted: "시작하기!",
+      next: "다음",
+    },
   },
   zh: {
     appName: "智能冰箱",
@@ -250,12 +304,23 @@ export const translations = {
     scannerDesc: "请将条形码置于框架内",
     units: ["公斤", "克", "升", "毫升", "个", "袋", "盒", "把", "片"],
     categories: {
-      'Thịt & Hải sản': '肉类和海鲜',
-      'Rau củ': '蔬菜',
-      'Trái cây': '水果',
-      'Sữa & Trứng': '奶制品和蛋类',
-      'Gia vị': '调料',
-      'Khác': '其他'
-    }
-  }
+      "Thịt & Hải sản": "肉类和海鲜",
+      "Rau củ": "蔬菜",
+      "Trái cây": "水果",
+      "Sữa & Trứng": "奶制品和蛋类",
+      "Gia vị": "调料",
+      Khác: "其他",
+    },
+    onboarding: {
+      welcome: "欢迎来到智能厨房！👋",
+      step1Title: "扫描并添加",
+      step1Desc: "使用摄像头扫描条形码，或手动将新购食材添加到冰箱。",
+      step2Title: "追踪到期日",
+      step2Desc: "当食材快过期时我们会提醒您，避免浪费食物。",
+      step3Title: "AI 菜谱推荐",
+      step3Desc: "AI 会根据现有食材推荐美味菜谱，并计算卡路里！",
+      getStarted: "立即开始！",
+      next: "下一步",
+    },
+  },
 };

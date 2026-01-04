@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --font-lexend: "Lexend", sans-serif;
+}
+
+/* SỬA LỖI: Viết CSS trực tiếp thay vì dùng @apply */
+body {
+  font-family: var(--font-lexend);
+  
+  /* Code ẩn thanh cuộn (Scrollbar) */
+  -ms-overflow-style: none;  /* Cho IE và Edge */
+  scrollbar-width: none;  /* Cho Firefox */
+}
+
+/* Ẩn thanh cuộn cho Chrome, Safari, Opera */
+body::-webkit-scrollbar {
+  display: none;
+}

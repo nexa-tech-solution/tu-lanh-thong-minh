@@ -1,5 +1,10 @@
-
-export type Category = 'Thịt & Hải sản' | 'Rau củ' | 'Trái cây' | 'Sữa & Trứng' | 'Gia vị' | 'Khác';
+export type Category =
+  | "Thịt & Hải sản"
+  | "Rau củ"
+  | "Trái cây"
+  | "Sữa & Trứng"
+  | "Gia vị"
+  | "Khác";
 
 export interface FoodItem {
   id: string;
@@ -21,7 +26,7 @@ export interface Recipe {
   calories: number; // Ước tính calo (kcal)
 }
 
-export type Language = 'vi' | 'en' | 'ja' | 'ko' | 'zh';
+export type Language = "vi" | "en" | "ja" | "ko" | "zh";
 
 export interface AppState {
   items: FoodItem[];

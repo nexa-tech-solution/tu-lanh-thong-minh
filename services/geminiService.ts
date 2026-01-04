@@ -1,19 +1,29 @@
-
 import { GoogleGenAI, Type } from "@google/genai";
 import { FoodItem, Recipe, Language } from "../types";
 
-export const generateRecipes = async (expiringItems: FoodItem[], allItems: FoodItem[], lang: Language): Promise<Recipe[]> => {
+export const generateRecipes = async (
+  expiringItems: FoodItem[],
+  allItems: FoodItem[],
+  lang: Language
+): Promise<Recipe[]> => {
   const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-  
-  const listExpiring = expiringItems.length > 0 ? expiringItems.map(i => i.name).join(', ') : "None";
-  const listOthers = allItems.filter(i => !expiringItems.find(e => e.id === i.id)).slice(0, 10).map(i => i.name).join(', ');
+
+  const listExpiring =
+    expiringItems.length > 0
+      ? expiringItems.map((i) => i.name).join(", ")
+      : "None";
+  const listOthers = allItems
+    .filter((i) => !expiringItems.find((e) => e.id === i.id))
+    .slice(0, 10)
+    .map((i) => i.name)
+    .join(", ");
 
   const languageMap: Record<Language, string> = {
     vi: "Vietnamese (Tiếng Việt)",
     en: "English",
     ja: "Japanese (日本語)",
     ko: "Korean (한국어)",
-    zh: "Chinese (中文)"
+    zh: "Chinese (中文)",
   };
 
   const prompt = `You are a world-class home chef and nutritionist. 
@@ -48,7 +58,7 @@ export const generateRecipes = async (expiringItems: FoodItem[], allItems: FoodI
 
   try {
     const response = await ai.models.generateContent({
-      model: "gemini-flash-lite-latest", 
+      model: "gemini-flash-lite-latest",
       contents: prompt,
       config: {
         responseMimeType: "application/json",
@@ -65,15 +75,22 @@ export const generateRecipes = async (expiringItems: FoodItem[], allItems: FoodI
               ingredients: { type: Type.ARRAY, items: { type: Type.STRING } },
               instructions: { type: Type.ARRAY, items: { type: Type.STRING } },
               reason: { type: Type.STRING },
-              calories: { type: Type.INTEGER }
+              calories: { type: Type.INTEGER },
             },
-            required: ["id", "name", "ingredients", "instructions", "reason", "calories"]
-          }
-        }
-      }
+            required: [
+              "id",
+              "name",
+              "ingredients",
+              "instructions",
+              "reason",
+              "calories",
+            ],
+          },
+        },
+      },
     });
 
-    const text = response.text || '[]';
+    const text = response.text || "[]";
     return JSON.parse(text);
   } catch (error) {
     console.error("Gemini Error:", error);
