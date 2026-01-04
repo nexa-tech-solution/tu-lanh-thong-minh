@@ -63,9 +63,15 @@ export const translations = {
       rescan: "Quét lại",
       save: "Lưu vào tủ",
       unsupported: "Trình duyệt không hỗ trợ quét mã vạch",
-      cameraError: "Lỗi camera. Vui lòng cấp quyền truy cập.",
+      cameraError:
+        "Không thể truy cập camera. Bác vui lòng cấp quyền cho ứng dụng nhé!",
       searching: "Đang tìm mã vạch...",
-      instruction: "Đưa mã vạch trên bao bì sản phẩm vào giữa khung hình đỏ.",
+      instruction:
+        "Đưa mã vạch sản phẩm vào khung đỏ. Hãy đảm bảo đủ ánh sáng!",
+      startBtn: "Bật Camera Quét",
+      permissionTitle: "Cần Quyền Camera",
+      permissionDesc:
+        "Để quét mã vạch, bác hãy nhấn nút dưới đây và chọn 'Cho phép' khi trình duyệt hỏi nhé.",
     },
     onboarding: {
       welcome: "Chào bác đến với Bếp Thông Minh! 👋",
@@ -138,9 +144,14 @@ export const translations = {
       rescan: "Scan Again",
       save: "Add to Fridge",
       unsupported: "Browser doesn't support barcode scanning",
-      cameraError: "Camera error. Please check permissions.",
+      cameraError: "Could not access camera. Please grant permission.",
       searching: "Scanning...",
-      instruction: "Place the product barcode inside the red frame.",
+      instruction:
+        "Place the product barcode inside the red frame. Ensure good lighting!",
+      startBtn: "Start Camera",
+      permissionTitle: "Camera Permission Needed",
+      permissionDesc:
+        "To scan barcodes, please click the button and select 'Allow' when prompted.",
     },
     onboarding: {
       welcome: "Welcome to Smart Kitchen! 👋",
@@ -213,9 +224,13 @@ export const translations = {
       rescan: "再スキャン",
       save: "保存する",
       unsupported: "お使いのブラウザはスキャンをサポートしていません",
-      cameraError: "カメラエラー。権限を確認してください。",
+      cameraError: "カメラにアクセスできません。権限を許可してください。",
       searching: "スキャン中...",
       instruction: "商品のバーコードを赤い枠内に合わせてください。",
+      startBtn: "カメラを起動",
+      permissionTitle: "カメラの権限が必要です",
+      permissionDesc:
+        "スキャンを開始するには、下のボタンを押して「許可」を選択してください。",
     },
     onboarding: {
       welcome: "スマート冷蔵庫へようこそ！👋",
@@ -286,9 +301,13 @@ export const translations = {
       rescan: "다시 스캔",
       save: "저장하기",
       unsupported: "바코드 스캔을 지원하지 않는 브라우저입니다",
-      cameraError: "카메라 오류. 권한을 확인하세요.",
+      cameraError: "카메라에 접근할 수 없습니다. 권한을 허용해 주세요.",
       searching: "스캔 중...",
       instruction: "제품 바코드를 빨간색 프레임 안에 위치시켜 주세요.",
+      startBtn: "카메라 켜기",
+      permissionTitle: "카메라 권한 필요",
+      permissionDesc:
+        "스캔을 위해 카메라 권한이 필요합니다. 아래 버튼을 눌러주세요.",
     },
     onboarding: {
       welcome: "스마트 주방에 오신 것을 환영합니다! 👋",
@@ -358,9 +377,12 @@ export const translations = {
       rescan: "重新扫描",
       save: "添加到冰箱",
       unsupported: "浏览器不支持条形码扫描",
-      cameraError: "相机错误。请检查权限。",
+      cameraError: "无法访问相机，请授予相机访问权限。",
       searching: "正在扫描...",
       instruction: "请将商品条形码对准红色框内。",
+      startBtn: "开启相机",
+      permissionTitle: "需要相机权限",
+      permissionDesc: "为了扫描条形码，请点击下方按钮并在浏览器中选择“允许”。",
     },
     onboarding: {
       welcome: "欢迎来到智能厨房！👋",
