@@ -177,7 +177,7 @@ const App: React.FC = () => {
             )}
           </div>
 
-          <button
+          {/* <button
             onClick={() => setIsScannerOpen(true)}
             className="w-11 h-11 flex items-center justify-center bg-orange-100 text-orange-600 rounded-2xl active:scale-90 transition-transform"
           >
@@ -197,7 +197,7 @@ const App: React.FC = () => {
               <path d="M21 17v2a2 2 0 0 1-2 2h-2" />
               <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
             </svg>
-          </button>
+          </button> */}
           <button
             onClick={() => setIsAddModalOpen(true)}
             className="w-11 h-11 flex items-center justify-center bg-emerald-600 text-white rounded-2xl shadow-lg shadow-emerald-200 active:scale-90 transition-transform"

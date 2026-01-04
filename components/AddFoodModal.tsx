@@ -96,7 +96,7 @@ const AddFoodModal: React.FC<AddFoodModalProps> = ({
             <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest">
               {t.pickIcon}
             </label>
-            <div className="flex gap-2 overflow-x-auto pb-4 scrollbar-hide">
+            <div className="flex gap-2 overflow-x-auto pb-4 pt-2 pl-2 scrollbar-hide">
               {emojis.map((emoji) => (
                 <button
                   key={emoji}
