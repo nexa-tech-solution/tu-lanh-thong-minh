@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chính Sách Bảo Mật - FoodMaster: Quản Lý Tủ Lạnh</title>
+    <style>
+        :root {
+            --bg-color: #090514;
+            --card-bg: #13131a;
+            --text-color: #e2e8f0;
+            --heading-color: #ffffff;
+            --accent-color: #d4af37; /* Vàng kim */
+            --accent-glow: rgba(212, 175, 55, 0.2);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --muted-text: #94a3b8;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Header Styles */
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        h1 {
+            font-family: 'Times New Roman', serif; /* Font Serif cho hợp Tarot */
+            color: var(--accent-color);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        .subtitle {
+            color: var(--muted-text);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Content Sections */
+        .section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        h2 {
+            color: var(--heading-color);
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Icon decoration for H2 */
+        h2::before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--muted-text);
+            font-size: 0.8rem;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .section { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>FoodMaster: Quản Lý Tủ Lạnh</h1>
+            <div class="subtitle">Chính Sách Bảo Mật & Quyền Riêng Tư</div>
+        </header>
+
+        <div class="section">
+            <h2>1. Giới thiệu chung</h2>
+            <p>Chào mừng bạn đến với <strong>FoodMaster: Quản Lý Tủ Lạnh</strong>. Chúng tôi cam kết bảo vệ sự riêng tư của bạn một cách tuyệt đối. Chính sách này giải thích cách chúng tôi xử lý thông tin của bạn khi bạn sử dụng ứng dụng.</p>
+            <p>Nguyên tắc cốt lõi của chúng tôi là: <span class="highlight">Dữ liệu của bạn thuộc về bạn.</span></p>
+        </div>
+
+
+        <div class="section">
+            <h2>2. Lưu trữ và Bảo mật dữ liệu</h2>
+            <p>Chúng tôi áp dụng mô hình <strong>Local-First (Ưu tiên cục bộ)</strong>:</p>
+            <ul>
+                <li>Toàn bộ thông tin cá nhân và nhật ký của bạn chỉ được lưu trữ trực tiếp trên bộ nhớ thiết bị của bạn (thông qua <code>LocalStorage</code>).</li>
+                <li>Chúng tôi <strong>KHÔNG</strong> thu thập, tải lên, hay lưu trữ dữ liệu của bạn trên bất kỳ máy chủ (server) nào.</li>
+                <li>Dữ liệu không bao giờ rời khỏi điện thoại của bạn trừ khi bạn chủ động chia sẻ (ví dụ: chụp ảnh màn hình gửi cho bạn bè).</li>
+            </ul>
+        </div>
+
+    
+       
+        <div class="section">
+            <h2>3. Liên hệ</h2>
+            <p>Nếu bạn có bất kỳ câu hỏi nào về Chính sách bảo mật này, vui lòng liên hệ với nhà phát triển:</p>
+            <p>📧 Email: <a href="mailto:cs.nexatech@gmail.com">cs.nexatech@gmail.com</a></p>
+            <p><i>(Vui lòng thay thế bằng email liên hệ thực tế của bạn)</i></p>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 FoodMaster: Quản Lý Tủ Lạnh. All rights reserved.</p>
+            <p>Cập nhật lần cuối: 05/01/2025</p>
+        </footer>
+    </div>
+
+</body>
+</html>
