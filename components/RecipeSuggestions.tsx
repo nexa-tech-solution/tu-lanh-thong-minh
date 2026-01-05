@@ -24,7 +24,7 @@ const RecipeSuggestions: React.FC<RecipeSuggestionsProps> = ({
   const [adCountdown, setAdCountdown] = useState(5);
   const [error, setError] = useState<string | null>(null);
   const [activeSubTab, setActiveSubTab] = useState<"ai" | "fav">("ai");
-
+  const [status, setStatus] = useState(-1); // 0: Ready Load Ads , 1: Loaded Ads, -1: Not Ready Load Ads
   const t = translations[lang] || translations.en;
 
   const CACHE_KEY = `smart_fridge_ai_recipes_v2_${lang}`;
@@ -77,20 +77,12 @@ const RecipeSuggestions: React.FC<RecipeSuggestionsProps> = ({
   }, [fetchRecipes, activeSubTab, recipes.length]);
 
   const startAdAndRefresh = () => {
-    setAdPlaying(true);
-    setAdCountdown(5);
-
-    const timer = setInterval(() => {
-      setAdCountdown((prev) => {
-        if (prev <= 1) {
-          clearInterval(timer);
-          setAdPlaying(false);
-          fetchRecipes(true);
-          return 0;
-        }
-        return prev - 1;
-      });
-    }, 1000);
+    //@ts-expect-error no check
+    window.ReactNativeWebView.postMessage(
+      JSON.stringify({
+        type: "SHOW_REWARDED",
+      })
+    );
   };
 
   const handleRefreshClick = () => {
@@ -106,7 +98,44 @@ const RecipeSuggestions: React.FC<RecipeSuggestionsProps> = ({
   };
 
   const displayList = activeSubTab === "ai" ? recipes : favorites;
+  useEffect(() => {
+    if (status === 1) {
+      fetchRecipes(true);
+      setStatus(-1);
+      return;
+    }
+  }, [status]);
 
+  useEffect(() => {
+    const handleNativeMessage = (event) => {
+      try {
+        // Depending on platform/version, you might need to check the origin
+        // But usually, just parse event.data
+        const data = JSON.parse(event.data);
+
+        if (data.type === "LOAD_ADS_COMPLETE") {
+          setStatus(1);
+        }
+        if (data.type === "READY_LOAD_ADS") {
+          setStatus(0);
+        }
+        if (data.type === "NOT_READY_LOAD_ADS") {
+          setStatus(-1);
+        }
+      } catch (err) {
+        // Ignore non-JSON messages (some libraries inject their own messages)
+      }
+    };
+
+    // Add Listener
+    window.addEventListener("message", handleNativeMessage); // For Android
+    document.addEventListener("message", handleNativeMessage); // For iOS legacy support
+
+    return () => {
+      window.removeEventListener("message", handleNativeMessage);
+      document.removeEventListener("message", handleNativeMessage);
+    };
+  }, []);
   return (
     <div className="space-y-6 animate-in fade-in zoom-in-95 duration-700 pb-10">
       {/* Ad Overlay Simulation */}
