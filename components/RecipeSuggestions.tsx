@@ -47,6 +47,7 @@ const RecipeSuggestions: React.FC<RecipeSuggestionsProps> = ({
             localStorage.removeItem(CACHE_KEY);
           }
         }
+        return;
       }
 
       setLoading(true);
@@ -256,26 +257,23 @@ const RecipeSuggestions: React.FC<RecipeSuggestionsProps> = ({
           </div>
         ))}
 
-      {activeSubTab === "ai" &&
-        !loading &&
-        !adPlaying &&
-        recipes.length > 0 && (
-          <div className="space-y-3">
-            {localStorage.getItem(DATE_KEY) === new Date().toDateString() && (
-              <p className="text-[10px] font-bold text-slate-400 text-center uppercase tracking-tight italic">
-                {t.refreshLimit}
-              </p>
-            )}
-            <button
-              onClick={handleRefreshClick}
-              className="w-full py-5 bg-orange-100 text-orange-700 rounded-3xl font-black transition-all active:scale-95 flex items-center justify-center gap-3"
-            >
-              {localStorage.getItem(DATE_KEY) === new Date().toDateString()
-                ? `📺 ${t.watchAd}`
-                : `🔄 ${t.refreshAI}`}
-            </button>
-          </div>
-        )}
+      {activeSubTab === "ai" && !loading && !adPlaying && (
+        <div className="space-y-3">
+          {localStorage.getItem(DATE_KEY) === new Date().toDateString() && (
+            <p className="text-[10px] font-bold text-slate-400 text-center uppercase tracking-tight italic">
+              {t.refreshLimit}
+            </p>
+          )}
+          <button
+            onClick={handleRefreshClick}
+            className="w-full py-5 bg-orange-100 text-orange-700 rounded-3xl font-black transition-all active:scale-95 flex items-center justify-center gap-3"
+          >
+            {localStorage.getItem(DATE_KEY) === new Date().toDateString()
+              ? `📺 ${t.watchAd}`
+              : `🔄 ${t.refreshAI}`}
+          </button>
+        </div>
+      )}
     </div>
   );
 };
