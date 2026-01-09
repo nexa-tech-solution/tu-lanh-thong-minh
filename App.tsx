@@ -14,7 +14,7 @@ const App: React.FC = () => {
     "dashboard" | "inventory" | "recipes"
   >("dashboard");
   const [lang, setLang] = useState<Language>(
-    () => (localStorage.getItem("lang") as Language) || "vi"
+    () => (localStorage.getItem("lang") as Language) || "en"
   );
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
 
